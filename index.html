@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<style>
+#main-div {
+    height: 300px;
+    width: 400px;
+    border: 3px solid #FF5733; /* Orange border */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F0F0F0; /* Light gray background */
+}
+
+#displayed {
+    height: 50px;
+    border: 3px solid #000;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+input[type="number"], button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #FF5733; /* Orange border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="number"]::placeholder {
+    color: #888; /* Gray placeholder text */
+}
+
+button {
+    background-color: #FF5733; /* Orange button background */
+    color: #FFF; /* White button text */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF8C42; /* Lighter orange on hover */
+}
+
+</style>
+<body>
+
+<div id="main-div">
+    <div id="displayed"></div>
+    <br><br>
+    <input type="number" id="first" placeholder="Enter first number">
+    <input type="number" id="second" placeholder="Enter second number">
+    <button onclick="return jaga();">Add (+)</button>
+</div>
+<script>
+ function jaga(){
+            var a = document.getElementById("displayed");
+            var b = parseFloat(document.getElementById("first").value);
+            var c = document.getElementById("first").value = "";
+            var d = parseFloat(document.getElementById("second").value);
+            var e = document.getElementById("second").value = "";
+            var f = "Your answer is: "+ (b + d);
+            a.innerHTML += f;
+            return false;
+            }
+</script>
+</body>
+</html> 
